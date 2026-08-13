@@ -39,7 +39,7 @@
     @apply btn border border-deep-sage/25 bg-transparent text-deep-sage hover:bg-deep-sage hover:text-warm-silk;
   }
   .btn-light {
-    @apply btn bg-warm-silk text-deep-sage hover:bg-cream;
+    @apply btn bg-warm-silk text-deep-sage hover:bg-muted-sand;
   }
 
   .chip {

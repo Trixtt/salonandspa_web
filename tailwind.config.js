@@ -4,12 +4,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        'warm-silk': '#FAF7F2',
+        'warm-silk': '#FFFFFF',
         'deep-sage': '#2D4030',
         'deep-sage-light': '#3D5A44',
-        'muted-sand': '#E8E2D5',
-        'muted-sand-deep': '#D8D0BE',
-        'cream': '#F1EAE0',
+        'muted-sand': '#E9EBEF',
+        'muted-sand-deep': '#D9DCE3',
+        'cream': '#F5F6F8',
         'terracotta-rose': '#C88A75',
         'terracotta-rose-dark': '#A45E43',
         'terracotta-rose-deep': '#8E5038',

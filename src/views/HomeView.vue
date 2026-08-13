@@ -20,6 +20,7 @@ import ServiceCard from '../components/ServiceCard.vue'
 import AppImage from '../components/AppImage.vue'
 import SampleBadge from '../components/SampleBadge.vue'
 import StarRating from '../components/StarRating.vue'
+import StatsSection from '../components/StatsSection.vue'
 
 const booking = useBooking()
 const openNow = computed(() => isOpenNow(site.hours))
@@ -91,6 +92,9 @@ function scrollToPricing() {
         </div>
       </div>
     </section>
+
+    <!-- ============ STATISTIK ============ -->
+    <StatsSection />
 
     <!-- ============ MARQUEE ============ -->
     <MarqueeStrip :items="marqueeItems" />

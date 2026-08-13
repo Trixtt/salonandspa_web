@@ -126,6 +126,15 @@ export const values = [
   },
 ]
 
+// Statistik singkat pada beranda (jumlah masalah yang telah ditangani, dll).
+// Angka dan label adalah data contoh - ganti dengan data asli bisnis Anda.
+export const stats = [
+  { value: 50, suffix: '+', label: 'Masalah kulit teratasi' },
+  { value: 10000, suffix: '+', label: 'Klien puas' },
+  { value: 15, suffix: '+', label: 'Tahun pengalaman' },
+  { value: 98, suffix: '%', label: 'Tingkat kepuasan' },
+]
+
 export const categories = [
   'Facial & Skincare',
   'Hair & Styling',

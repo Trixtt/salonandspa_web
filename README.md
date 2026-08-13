@@ -12,9 +12,10 @@ dikendalikan dari satu file konfigurasi (`src/config/content.js`).
 - **Tombol WhatsApp mengambang** di seluruh halaman (otomatis sembunyi di halaman Reservasi)
 - **Logo gambar**: pakai file logo Anda sendiri, atau biarkan kosong untuk logo teks
 - **Rating testimoni**: bintang rating per ulasan, bisa dimatikan lewat satu pengaturan
+- **Statistik teratasi**: angka count-up (masalah teratasi, klien puas, dll) di beranda, mudah diubah
 - **SEO dinamis**: judul halaman, meta description, dan tag Open Graph otomatis dari konfigurasi
 - Slider sebelum/sesudah, kapsul gambar, filter kategori layanan, pencarian
-- Layout mobile-first, tema warm (sage, terracotta, cream), font Playfair Display + Plus Jakarta Sans
+- Layout mobile-first, tema putih profesional dengan aksen sage & terracotta, font Playfair Display + Plus Jakarta Sans
 - Dukungan aksesibilitas dasar dan `prefers-reduced-motion`
 
 ## Struktur Proyek
@@ -118,7 +119,22 @@ Ubah array `services`. Setiap item:
 - `testimonials`: nama, `rating` (1-5), komentar. Bintang hanya tampil jika
   `showRatings = true`.
 
-### 6. Galeri & konten lain
+### 6. Statistik "masalah yang diatasi"
+
+Ubah array `stats` pada beranda (dengan animasi count-up saat discroll):
+
+```js
+export const stats = [
+  { value: 50,    suffix: '+', label: 'Masalah kulit teratasi' },
+  { value: 10000, suffix: '+', label: 'Klien puas' },
+  { value: 15,    suffix: '+', label: 'Tahun pengalaman' },
+  { value: 98,    suffix: '%', label: 'Tingkat kepuasan' },
+]
+```
+
+Angka ribuan otomatis diformat (misal `10.000`). Ganti dengan data asli bisnis Anda.
+
+### 7. Galeri & konten lain
 
 - `gallery.beforeAfter`: judul, deskripsi, foto sebelum & sesudah.
 - `gallery.portfolio` dan `gallery.interiors`: kumpulan foto dengan judul.
@@ -127,19 +143,19 @@ Ubah array `services`. Setiap item:
 - `heroPills`: kapsul gambar di beranda.
 - `about`: cerita, visi, dan misi.
 
-### 7. Foto
+### 8. Foto
 
 Semua `image` bisa diisi URL apa pun. Kosongkan untuk memakai placeholder otomatis
 (`public/images/placeholder.svg`). Untuk foto sendiri: taruh file di `public/images/`
 lalu isi `image: '/images/nama-file.jpg'`.
 
-### 8. Label "Contoh Data Template"
+### 9. Label "Contoh Data Template"
 
 Template menampilkan label kecil pada data contoh. Setelah konten diganti, matikan dengan
 mengubah `showSampleTags = false`. Bintang rating testimoni bisa dimatikan dengan
 `showRatings = false`.
 
-### 9. Warna & font
+### 10. Warna & font
 
 Sesuaikan di `tailwind.config.js` (bagian `theme.extend`) dan `src/assets/main.css`.
 
