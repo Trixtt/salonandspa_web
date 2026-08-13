@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-warm-silk font-body text-deep-sage antialiased;
+  }
+  ::selection {
+    background-color: #c88a75;
+    color: #ffffff;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-page px-5 sm:px-6 lg:px-8;
+  }
+
+  .btn {
+    @apply inline-flex h-12 min-w-11 items-center justify-center gap-2 rounded-full px-6 font-body text-base font-semibold transition-all duration-150 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-terracotta-rose focus-visible:ring-offset-2 focus-visible:ring-offset-warm-silk;
+  }
+  .btn-primary {
+    @apply btn bg-terracotta-rose-dark text-white hover:bg-terracotta-rose-deep;
+  }
+  .btn-dark {
+    @apply btn bg-deep-sage text-warm-silk hover:bg-deep-sage-light;
+  }
+  .btn-outline {
+    @apply btn border border-deep-sage/25 bg-transparent text-deep-sage hover:bg-deep-sage hover:text-warm-silk;
+  }
+  .btn-light {
+    @apply btn bg-warm-silk text-deep-sage hover:bg-cream;
+  }
+
+  .chip {
+    @apply inline-flex h-11 shrink-0 cursor-pointer items-center justify-center whitespace-nowrap rounded-full px-5 text-sm font-semibold transition-all duration-150 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-terracotta-rose;
+  }
+  .chip-active {
+    @apply bg-deep-sage text-warm-silk;
+  }
+  .chip-idle {
+    @apply bg-muted-sand text-deep-sage hover:bg-muted-sand-deep;
+  }
+
+  .input {
+    @apply w-full rounded-xl border border-deep-sage/15 bg-white px-4 py-3 text-deep-sage placeholder:text-deep-sage/40 focus:border-terracotta-rose focus:outline-none focus:ring-2 focus:ring-terracotta-rose/20;
+  }
+  .label-form {
+    @apply mb-2 block text-sm font-semibold text-deep-sage;
+  }
+
+  .section {
+    @apply py-14 md:py-20;
+  }
+
+  .eyebrow {
+    @apply mb-3 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.22em] text-terracotta-rose-deep;
+  }
+  .eyebrow::before {
+    content: '';
+    @apply inline-block h-px w-6 bg-terracotta-rose;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .crop-organic {
+    border-radius: 58% 42% 55% 45% / 55% 48% 52% 45%;
+  }
+}
+
+@layer components {
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 0.7s ease,
+      transform 0.7s ease;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  .page-enter-active,
+  .page-leave-active {
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease;
+  }
+  .page-enter-from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  .page-leave-to {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  .animate-marquee-up,
+  .animate-marquee-down,
+  .animate-marquee-x {
+    will-change: transform;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .page-enter-active,
+  .page-leave-active {
+    transition: none !important;
+  }
+  .page-enter-from,
+  .page-leave-to {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .animate-marquee-up,
+  .animate-marquee-down,
+  .animate-marquee-x {
+    animation: none !important;
+  }
+}
