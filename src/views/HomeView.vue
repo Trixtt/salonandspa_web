@@ -362,7 +362,7 @@ function scrollToPricing() {
     <MarqueeStrip :items="marqueeItems" />
 
     <!-- ============ CTA RESERVASI ============ -->
-    <section class="section pt-0">
+    <section class="section">
       <div class="container-page">
         <div
           v-reveal
