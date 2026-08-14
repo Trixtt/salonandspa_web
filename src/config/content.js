@@ -1,61 +1,55 @@
 // =====================================================================
-// KONFIGURASI TEMPLATE WEBSITE
+// KONFIGURASI KONTEN WEBSITE
 // Seluruh identitas bisnis dikontrol dari file ini.
 //
-// PANDUAN SINGKAT:
-// 1. Ganti semua nilai ber-kurung siku [..] di bawah dengan data bisnis Anda
-//    (nama, logo, tagline, telepon, email, alamat, jam buka, WhatsApp).
-// 2. Ganti foto (heroPills, services, specialists, gallery, about) dengan
-//    foto asli Anda.
-// 3. Jika konten sudah asli, matikan label contoh: showSampleTags = false.
-// 4. Build & deploy: `npm run build`, upload folder `dist/` (mis. ke Vercel).
+// ISI DI SINI: lengkapi form data kontak di bawah, lalu build ulang.
 // =====================================================================
-
-export const showSampleTags = true
 
 // Tampilkan bintang rating pada kartu testimoni.
 // Rating diatur per-testimoni lewat field "rating" di data testimonials.
 export const showRatings = true
 
 export const site = {
-  businessName: '[Nama Bisnis Anda]',
-  shortName: '[Nama Bisnis]',
+  businessName: 'Funny Beauty Studio',
+  shortName: 'Funny Beauty Studio',
   // Logo gambar (opsional). Letakkan file di folder public/images/ lalu tulis
   // path-nya di sini, misal '/images/logo-anda.png'. Bisa juga URL gambar apa pun.
   // Kosongkan ('') untuk memakai nama bisnis sebagai logo teks.
-  logoImage: '/images/logo-sample.svg',
-  tagline: '[Tagline bisnis Anda]',
+  logoImage: '',
+  tagline: 'Salon & Klinik Kecantikan',
   heroTitle: 'Rawat Kecantikan Alami, Pancarkan Kepercayaan Diri',
   heroSubtitle:
     'Salon, klinik skincare, dan spa dalam satu tempat. Perawatan dengan bahan terdaftar BPOM, terapis bersertifikat, dan ruang privat yang steril.',
+  // ==========================================================
+  // FORM DATA KONTAK — isi sendiri
   // Nomor WhatsApp format internasional tanpa tanda + (misal 628xxxxxxxxxx).
-  // Ganti dengan nomor bisnis Anda.
-  whatsappNumber: '6281123456789',
-  phone: '[Nomor Telepon Anda]',
-  email: '[Alamat Email Anda]',
+  whatsappNumber: '62857280599999',
+  phone: '62857280599999',
+  // Belum diketahui, isi nanti:
+  email: '',
   // Contoh: 'https://instagram.com/namaakun' (kosongkan jika tidak dipakai)
-  instagram: '',
-  address: '[Alamat Lengkap Anda]',
+  instagram: 'https://instagram.com/funnybeautystudio_',
+  address:
+    'Kaliputu, Jl. Sumur Kotak 9, Gg. Nanas No. 45-46, Candi Lor, Singocandi, Kec. Kota Kudus, Kabupaten Kudus, Jawa Tengah 59314',
   // Contoh: 'https://maps.google.com/?q=...' (kosongkan jika tidak dipakai)
   googleMapsUrl: '',
   hours: {
     // openDays: 0 = Minggu, 1 = Senin, dst. Sesuaikan hari buka Anda.
     openDays: [0, 1, 2, 3, 4, 5, 6],
     // open/close dipakai logika status "Buka Hari Ini". Sesuaikan jam Anda.
-    open: '09:00',
-    close: '19:00',
+    open: '10:00',
+    close: '18:00',
     // Teks jam buka yang tampil di website.
-    dayText: '[Hari & Jam Buka Anda]',
+    dayText: 'Setiap hari, 10.00 s.d. 18.00',
   },
 }
 
 // Pengaturan SEO. Nilai ini dipakai otomatis untuk judul halaman, deskripsi di
 // hasil pencarian, dan tampilan saat link dibagikan di media sosial.
-// Ganti teks dalam kurung siku [..] dengan data bisnis Anda.
 export const seo = {
-  title: '[Nama Bisnis Anda] - Salon, Skincare & Spa',
+  title: 'Funny Beauty Studio | Salon & Klinik Kecantikan',
   description:
-    '[Tulis 1-2 kalimat deskripsi bisnis Anda untuk hasil pencarian. Contoh: Salon dan klinik skincare dengan bahan BPOM, terapis bersertifikat, dan ruang privat. Reservasi mudah lewat WhatsApp.]',
+    'Funny Beauty Studio adalah salon dan klinik kecantikan di Kudus dengan perawatan skincare, spa, dan perawatan rambut. Bahan terdaftar BPOM, terapis bersertifikat, dan ruang privat yang steril.',
   // Foto cover saat link dibagikan (opsional, bisa URL eksternal).
   ogImage: '',
 }
@@ -158,7 +152,7 @@ export const services = [
   {
     id: 2,
     category: 'Facial & Skincare',
-    title: 'Hydra-Glow Facial',
+    title: 'Hydra Glow Facial',
     description:
       'Deep cleansing dan hidrasi intensif untuk mengangkat sel kulit mati dan mencerahkan kulit kusam.',
     duration: 75,
@@ -194,9 +188,9 @@ export const services = [
   {
     id: 5,
     category: 'Nail & Lash',
-    title: 'Classic Mani-Pedi',
+    title: 'Classic Mani Pedi',
     description:
-      'Perawatan kuku tangan dan kaki dengan pembersihan presisi, pijat ringan, dan pilihan cat non-toksik.',
+      'Perawatan kuku tangan dan kaki dengan pembersihan presisi, pijat ringan, dan pilihan cat tanpa zat beracun.',
     duration: 90,
     price: 450000,
     isFeatured: true,
@@ -246,7 +240,7 @@ export const specialists = [
     name: 'Amelia Sari',
     role: 'Lead Esthetician',
     experienceYears: 10,
-    bio: 'Spesialis perawatan anti-aging dan teknik pijat wajah holistik.',
+    bio: 'Spesialis perawatan anti penuaan dan teknik pijat wajah holistik.',
     image:
       'https://lh3.googleusercontent.com/aida-public/AB6AXuBiNv9JVceQi2lP4PsvhXsCgoba0qYWxeqz74CjdRZOgqOxXsnLkqMwwlxXoahIK_RqPCW1KJVQLYD_1KZtEnGnaOqnQlgMNMauoXrBycLxKZConESdjYCj7Ajf4NJJOotXSee7w6dsWYhGnTkjxgfrT-aj-orz9QU21NP5mz5If3FhhkvQ9EoGPs0n5euyDSoqa_vZISrP8e8Kh7nzfkif6InOdknQNJ-cdHSmW-CujadTZj9o3-U_',
   },
@@ -308,7 +302,7 @@ export const gallery = {
         'https://lh3.googleusercontent.com/aida-public/AB6AXuB3UEzvye34smN6zSMNsqwz9f8wLFjAxlh_a2sCu63TSbyv-WgDV9a5G_rc-_Rjt9LbPGz99NibAwQgrMp8w0ZBH8ujc8yQ9_qZXGRLP0LNC7O42oFbgxNVriKeVDtWrR11hk2GD6v2snan9pqkDwJNDM0KpXs22N3LHyFoFwZ0HWtqRpdOIhe7KAeyptJpFUxSBTkGQNVrZp7_8DzuacnT4kMWTHTlmIwzmGZoEMsZfplP6xxzPhi_',
     },
     {
-      title: 'Hydra-Glow Facial',
+      title: 'Hydra Glow Facial',
       tag: 'Aesthetic Skin',
       image:
         'https://lh3.googleusercontent.com/aida-public/AB6AXuBfWnAcgocVIshcO6N7GJ0ZproR7ZMZwWerNgshoHX1Vc22JVPg4LnjjlMFFf_63kRF47TJO4LFnwn82JWucWx-9cEqlG1_kxauflGJGmdkwIt5REvo38k9aqFXLhd76dZuls0jKx-7A6phq2yG1mBCLdGOVcYhB-i04nt0QVbTwsC2hOobo89x2aLKHPQCqgfjhBQLeG7zDWJ-hEgNyZMNKhD074jd_q9VNoGssEQZiPQ_gJlSBi_7',

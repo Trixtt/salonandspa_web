@@ -16,7 +16,7 @@ const href = `https://wa.me/${site.whatsappNumber}?text=${message}`
 
 <template>
   <a
-    v-if="!isReservationPage"
+    v-if="!isReservationPage && site.whatsappNumber"
     :href="href"
     target="_blank"
     rel="noopener"

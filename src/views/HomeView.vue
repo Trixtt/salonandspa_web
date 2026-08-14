@@ -9,7 +9,6 @@ import {
   specialists,
   testimonials,
   about,
-  showSampleTags,
 } from '../config/content'
 import { isOpenNow } from '../utils/format'
 import { useBooking } from '../store/booking'
@@ -18,7 +17,6 @@ import MarqueeStrip from '../components/MarqueeStrip.vue'
 import SectionHeading from '../components/SectionHeading.vue'
 import ServiceCard from '../components/ServiceCard.vue'
 import AppImage from '../components/AppImage.vue'
-import SampleBadge from '../components/SampleBadge.vue'
 import StarRating from '../components/StarRating.vue'
 import StatsSection from '../components/StatsSection.vue'
 
@@ -233,7 +231,7 @@ function scrollToPricing() {
               <span
                 class="grid h-9 w-9 place-items-center rounded-full bg-terracotta-rose text-sm font-bold text-white"
               >
-                L
+                {{ site.shortName.trim().charAt(0).toUpperCase() }}
               </span>
               <div>
                 <p class="text-sm font-semibold leading-tight text-deep-sage">
@@ -259,9 +257,6 @@ function scrollToPricing() {
                 Siap, terima kasih
               </p>
             </div>
-            <div class="mt-4 flex justify-center">
-              <SampleBadge />
-            </div>
           </div>
         </div>
       </div>
@@ -276,7 +271,6 @@ function scrollToPricing() {
             title="Ditangani tangan-tangan berpengalaman"
             lead="Terapis dan spesialis kami bersertifikat dan menjalani pelatihan berkala."
           />
-          <SampleBadge v-if="showSampleTags" />
         </div>
 
         <div class="mt-12 grid gap-8 md:grid-cols-3">
@@ -344,11 +338,6 @@ function scrollToPricing() {
         </div>
 
         <div class="mt-8 flex flex-col items-center gap-3 text-center">
-          <SampleBadge />
-          <p class="text-xs text-sage-muted">
-            Ulasan di atas adalah contoh data template. Ganti dengan ulasan asli
-            pelanggan Anda.
-          </p>
           <a
             v-if="site.googleMapsUrl"
             :href="site.googleMapsUrl"

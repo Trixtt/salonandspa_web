@@ -1,8 +1,7 @@
 <script setup>
-import { about, site, specialists, showSampleTags } from '../config/content'
+import { about, site, specialists } from '../config/content'
 import SectionHeading from '../components/SectionHeading.vue'
 import AppImage from '../components/AppImage.vue'
-import SampleBadge from '../components/SampleBadge.vue'
 
 const commitments = [
   {
@@ -155,7 +154,6 @@ const commitments = [
             title="Para ahli di balik setiap perawatan"
             lead="Terapis bersertifikat dengan pengalaman bertahun-tahun di bidangnya."
           />
-          <SampleBadge v-if="showSampleTags" />
         </div>
         <div class="mt-12 grid gap-8 md:grid-cols-3">
           <div

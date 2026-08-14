@@ -29,7 +29,7 @@ const hidden = computed(
             ></span>
             {{ openNow ? 'Buka Hari Ini' : 'Tutup Sekarang' }}
           </p>
-          <p class="truncate text-xs text-warm-silk/70">
+          <p v-if="site.hours.dayText" class="truncate text-xs text-warm-silk/70">
             {{ site.hours.dayText }}
           </p>
         </div>

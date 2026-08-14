@@ -1,7 +1,6 @@
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue'
-import { stats, showSampleTags } from '../config/content'
-import SampleBadge from './SampleBadge.vue'
+import { stats } from '../config/content'
 
 const reducedMotion = () =>
   typeof window !== 'undefined' &&
@@ -59,7 +58,6 @@ onUnmounted(() => {
         <h2 class="text-2xl leading-tight text-deep-sage md:text-3xl">
           Masalah perawatan yang telah kami atasi
         </h2>
-        <SampleBadge v-if="showSampleTags" />
 
         <div
           class="mt-8 grid w-full grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-4"

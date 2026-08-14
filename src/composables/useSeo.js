@@ -23,7 +23,7 @@ function setMeta(attrName, attrValue, content) {
 
 function applySeo(path) {
   const page = pageTitles[path] || 'Halaman Tidak Ditemukan'
-  const title = `${page} - ${site.businessName}`
+  const title = `${page} | ${site.businessName}`
   document.title = title
   setMeta('name', 'description', seo.description)
   setMeta('property', 'og:type', 'website')

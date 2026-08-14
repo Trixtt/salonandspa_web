@@ -17,8 +17,8 @@ export default {
         'sage-muted': '#5C6B5E',
       },
       fontFamily: {
-        display: ['"Playfair Display"', 'Georgia', 'serif'],
-        body: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        display: ['"Inter Variable"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        body: ['"Inter Variable"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
         soft: '0 6px 24px rgba(45, 64, 48, 0.08)',

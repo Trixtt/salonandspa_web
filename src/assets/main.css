@@ -66,10 +66,6 @@
   .eyebrow {
     @apply mb-3 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.22em] text-terracotta-rose-deep;
   }
-  .eyebrow::before {
-    content: '';
-    @apply inline-block h-px w-6 bg-terracotta-rose;
-  }
 }
 
 @layer utilities {

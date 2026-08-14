@@ -1,9 +1,8 @@
 <script setup>
-import { gallery, site, testimonials, showSampleTags } from '../config/content'
+import { gallery, site, testimonials } from '../config/content'
 import SectionHeading from '../components/SectionHeading.vue'
 import BeforeAfterSlider from '../components/BeforeAfterSlider.vue'
 import AppImage from '../components/AppImage.vue'
-import SampleBadge from '../components/SampleBadge.vue'
 import StarRating from '../components/StarRating.vue'
 </script>
 
@@ -27,7 +26,6 @@ import StarRating from '../components/StarRating.vue'
           eyebrow="Sebelum & Sesudah"
           :title="`Hasil perawatan ${gallery.beforeAfter.title}`"
         />
-        <SampleBadge v-if="showSampleTags" />
       </div>
       <p class="mx-auto mt-4 max-w-xl text-center text-sm text-sage-muted">
         {{ gallery.beforeAfter.description }}
@@ -146,7 +144,6 @@ import StarRating from '../components/StarRating.vue'
           </figure>
         </div>
         <div class="mt-8 flex flex-col items-center gap-3 text-center">
-          <SampleBadge />
           <a
             v-if="site.googleMapsUrl"
             :href="site.googleMapsUrl"

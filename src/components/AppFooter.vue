@@ -48,15 +48,15 @@ const navigation = [
           Kontak
         </h4>
         <ul class="mt-4 space-y-3 text-sm text-warm-silk/80">
-          <li class="flex items-start gap-2">
+          <li v-if="site.address" class="flex items-start gap-2">
             <span class="material-symbols-outlined !text-base text-terracotta-rose">location_on</span>
             {{ site.address }}
           </li>
-          <li class="flex items-center gap-2">
+          <li v-if="site.phone" class="flex items-center gap-2">
             <span class="material-symbols-outlined !text-base text-terracotta-rose">call</span>
             {{ site.phone }}
           </li>
-          <li class="flex items-center gap-2">
+          <li v-if="site.email" class="flex items-center gap-2">
             <span class="material-symbols-outlined !text-base text-terracotta-rose">mail</span>
             {{ site.email }}
           </li>
@@ -80,7 +80,7 @@ const navigation = [
         class="container-page flex flex-col items-center justify-between gap-2 py-5 text-xs text-warm-silk/60 sm:flex-row"
       >
         <p>© {{ year }} {{ site.businessName }}. Semua hak dilindungi.</p>
-        <p>Template website siap dikustomisasi untuk bisnis Anda.</p>
+        <p>Reservasi mudah melalui WhatsApp.</p>
       </div>
     </div>
   </footer>
